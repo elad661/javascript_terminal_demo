@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#in {
+  position: absolute;
+  left: -1000px;
+}
+@keyframes "blink" {
+  from,
+  to {
+    color: white;
+    background: none;
+  }
+  50% {
+    color: black;
+    background-color: white;
+  }
+}
+@-webkit-keyframes "blink" {
+  from,
+  to {
+    color: white;
+    background: none;
+  }
+  50% {
+    color: black;
+    background-color: white;
+  }
+}
+#inputline {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+#caret {
+  display: inline-block;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+#in:focus ~ #inputline > #terminalcontent > #caret {
+  border: none;
+  background-color: white;
+  color: black;
+}
+#in:focus ~ #inputline > #terminalcontent > #caret.blink {
+  /* blink if input is focused */
+  animation: 1.5s blink step-end infinite;
+  animation-delay: 500ms;
+  -webkit-animation: 1.5s blink step-end infinite;
+  -webkit-animation-delay: 500ms;
+}
