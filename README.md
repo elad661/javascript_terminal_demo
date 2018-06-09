@@ -1,5 +1,7 @@
 This is a small demo of a javascript based simplistic terminal emulator.
 
+See [the demo in action](https://elad661.github.io/javascript_terminal_demo/).
+
 It doesn't have all the features a regular terminal has, but it's enough
 to get you started if you want to build a web-based terminal-styled REPL.
 
